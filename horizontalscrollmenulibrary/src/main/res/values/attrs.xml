@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HorizontalScrollMenuView">
+        <attr name="icon_width" format="dimension" />
+        <attr name="icon_height" format="dimension" />
+        <attr name="backgroundMenuColor" format="color" />
+        <attr name="backgroundNotifications" format="color" />
+        <attr name="item_textColor" format="color" />
+        <attr name="item_backgroundColor" format="color" />
+        <attr name="item_radius" format="dimension" />
+        <attr name="item_marginTop" format="dimension" />
+        <attr name="item_marginBottom" format="dimension" />
+        <attr name="item_marginLeft" format="dimension" />
+        <attr name="item_marginRight" format="dimension" />
+        <attr name="item_colorSelected" format="color" />
+        <attr name="item_textSize" format="dimension" />
+    </declare-styleable>
+</resources>

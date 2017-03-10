@@ -4,10 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.darwindeveloper.horizontalscrollmenu.MainActivity">
 
     <com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalScrollMenuView
         android:id="@+id/horizontal_menu"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundMenuColor="#0099cc"
+        app:icon_height="50dp"
+        app:icon_width="50dp"
+        app:item_backgroundColor="@color/colorPrimary"
+        app:item_colorSelected="#ffffff"
+        app:item_textColor="#ffffff" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>
