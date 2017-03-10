@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:backgroundMenuColor="#0099cc"
+        app:backgroundNotifications="@color/colorAccent"
         app:icon_height="50dp"
         app:icon_width="50dp"
         app:item_backgroundColor="@color/colorPrimary"

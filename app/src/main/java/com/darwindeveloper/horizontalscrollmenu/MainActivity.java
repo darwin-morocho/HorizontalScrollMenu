@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 //cambiamos el elemto seleccionado del menu a la posicion actual del viewpager
-                horizontal_menu.setSelected(position);
+                horizontal_menu.setItemSelected(position);
             }
 
             @Override

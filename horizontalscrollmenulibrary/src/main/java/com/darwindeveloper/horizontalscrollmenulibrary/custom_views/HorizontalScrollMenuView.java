@@ -28,6 +28,8 @@ public class HorizontalScrollMenuView extends LinearLayout {
     private ItemAdapter itemAdapter;
     private ArrayList<MenuItem> menuItems = new ArrayList<>();
 
+    private int itemSeletected = 0;
+
 
     //attrs
     private int icon_width = 60;
@@ -141,15 +143,23 @@ public class HorizontalScrollMenuView extends LinearLayout {
     /**
      * agrega un nuevo item al menu, pero este se mostrara como seleccionado
      *
-     * @param text    texto del item
+     * @param text texto del item
      */
     public void addItem(String text, int icon, int numNotifications) {
         menuItems.get(menuItems.size() - 1).setNumNotifications(numNotifications);
         menuItems.get(menuItems.size() - 1).setNotifications(true);
     }
 
+    /**
+     * @return retorna  la posicion del item seleccionado en el menu
+     */
+    public int getItemSeletected() {
+        return itemSeletected;
+    }
+
 
     /**
+     * edita un item del menu
      * @param position          posicion del item en el menu
      * @param text              nuevo texto para el item
      * @param icon              nuevo icono para el item
@@ -181,7 +191,7 @@ public class HorizontalScrollMenuView extends LinearLayout {
      *
      * @param position posicion del item en el menu
      */
-    public void setSelected(int position) {
+    public void setItemSelected(int position) {
         if (menuItems.size() > 0) {
             for (int i = 0; i < menuItems.size(); i++) {
                 if (i == position)
@@ -192,6 +202,7 @@ public class HorizontalScrollMenuView extends LinearLayout {
             itemAdapter.notifyItemRangeChanged(0, menuItems.size() - 1);
             itemAdapter.notifyDataSetChanged();
             recyclerView.scrollToPosition(position);
+            itemSeletected = position;
         }
     }
 
