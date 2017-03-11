@@ -38,7 +38,6 @@ public class HorizontalScrollMenuView extends LinearLayout {
     private int backgroundNotifications = Color.parseColor("#FF0000");
     private int item_textColor = Color.parseColor("#000000");
     private int item_backgroundColor = Color.parseColor("#FFFFFF");
-    private int item_radius = 0;
     private int item_marginTop = 0;
     private int item_marginBottom = 0;
     private int item_marginLeft = 0;
@@ -65,7 +64,6 @@ public class HorizontalScrollMenuView extends LinearLayout {
         item_textColor = a.getColor(R.styleable.HorizontalScrollMenuView_item_textColor, item_textColor);
         item_backgroundColor = a.getColor(R.styleable.HorizontalScrollMenuView_item_backgroundColor, item_backgroundColor);
         item_colorSelected = a.getColor(R.styleable.HorizontalScrollMenuView_item_colorSelected, item_colorSelected);
-        item_radius = a.getDimensionPixelSize(R.styleable.HorizontalScrollMenuView_item_radius, 0);
         item_marginTop = a.getDimensionPixelSize(R.styleable.HorizontalScrollMenuView_item_marginTop, 0);
         item_marginBottom = a.getDimensionPixelSize(R.styleable.HorizontalScrollMenuView_item_marginBottom, 0);
         item_marginLeft = a.getDimensionPixelSize(R.styleable.HorizontalScrollMenuView_item_marginLeft, 0);
@@ -86,7 +84,7 @@ public class HorizontalScrollMenuView extends LinearLayout {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         itemAdapter = new ItemAdapter(context, menuItems, icon_width, icon_height, item_textColor,
-                item_backgroundColor, item_radius, item_marginTop, item_marginBottom, item_marginLeft,
+                item_backgroundColor, item_marginTop, item_marginBottom, item_marginLeft,
                 item_marginRight, item_colorSelected, item_textSize, backgroundNotifications);
 
         itemAdapter.setOnHSItemClickListener(new ItemAdapter.OnHSItemClickListener() {

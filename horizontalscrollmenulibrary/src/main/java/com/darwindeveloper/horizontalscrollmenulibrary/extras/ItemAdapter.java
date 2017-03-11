@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.darwindeveloper.horizontalscrollmenulibrary.R;
@@ -28,7 +29,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     private int icon_height = 60;
     private int item_textColor = Color.parseColor("#000000");
     private int item_backgroundColor = Color.parseColor("#FFFFFF");
-    private int item_radius = 0;
     private int item_marginTop = 0;
     private int item_marginBottom = 0;
     private int item_marginLeft = 0;
@@ -39,7 +39,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     public ItemAdapter(Context context, ArrayList<MenuItem> menuItems, int icon_width,
                        int icon_height, int item_textColor,
-                       int item_backgroundColor, int item_radius, int item_marginTop,
+                       int item_backgroundColor, int item_marginTop,
                        int item_marginBottom, int item_marginLeft, int item_marginRight,
                        int item_colorSelected, int item_textSize, int background_notification) {
         this.context = context;
@@ -48,14 +48,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         this.icon_height = icon_height;
         this.item_textColor = item_textColor;
         this.item_backgroundColor = item_backgroundColor;
-        this.item_radius = item_radius;
+        ;
         this.item_marginTop = item_marginTop;
         this.item_marginBottom = item_marginBottom;
         this.item_marginLeft = item_marginLeft;
         this.item_marginRight = item_marginRight;
         this.item_colorSelected = item_colorSelected;
         this.item_textSize = item_textSize;
-        this.background_notification=background_notification;
+        this.background_notification = background_notification;
     }
 
     @Override
@@ -70,15 +70,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         final MenuItem menuItem = menuItems.get(position);
 
 
-        holder.cardView.setCardBackgroundColor(item_backgroundColor);
-        holder.cardView.setRadius(item_radius);
+        holder.itemView.setBackgroundColor(item_backgroundColor);
+
 
         holder.textItem.setText(menuItem.getText());
         holder.textItem.setTextColor(item_textColor);
         holder.textItem.setTextSize(item_textSize);
 
         holder.itemView.setPadding(item_marginLeft, item_marginTop, item_marginRight, item_marginBottom);
-        holder.cardView.setRadius(item_radius);
         holder.icon.setImageResource(menuItem.getIcon());
         android.view.ViewGroup.LayoutParams layoutParams = holder.icon.getLayoutParams();
         layoutParams.width = icon_width;
@@ -103,20 +102,12 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         }
 
 
-        holder.icon.setOnClickListener(new View.OnClickListener() {
+        holder.item_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onHSItemClickListener.onHSClick(menuItem, position);
             }
         });
-
-        holder.textItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onHSItemClickListener.onHSClick(menuItem, position);
-            }
-        });
-
 
 
     }
@@ -131,7 +122,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         TextView textItem;
         ImageView icon;
         View selected;
-        CardView cardView;
+        RelativeLayout item_content;
+
 
         public ItemViewHolder(View itemView) {
             super(itemView);
@@ -139,7 +131,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             textItem = (TextView) itemView.findViewById(R.id.textViewItem);
             icon = (ImageView) itemView.findViewById(R.id.imageViewItem);
             selected = itemView.findViewById(R.id.viewItemSelected);
-            cardView = (CardView) itemView.findViewById(R.id.card);
+            item_content = (RelativeLayout) itemView.findViewById(R.id.item_content);
         }
     }
 

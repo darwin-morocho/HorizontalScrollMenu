@@ -7,7 +7,6 @@
         <attr name="backgroundNotifications" format="color" />
         <attr name="item_textColor" format="color" />
         <attr name="item_backgroundColor" format="color" />
-        <attr name="item_radius" format="dimension" />
         <attr name="item_marginTop" format="dimension" />
         <attr name="item_marginBottom" format="dimension" />
         <attr name="item_marginLeft" format="dimension" />

@@ -1,62 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="0dp"
-        android:padding="0dp">
+        android:id="@+id/item_content"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/imageViewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/homework" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewItem"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="TextView" />
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                app:cardCornerRadius="0dp"
-                app:cardPreventCornerOverlap="true">
-
-                <LinearLayout
-                    style="@style/Base.Widget.AppCompat.Button.Borderless"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageViewItem"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        app:srcCompat="@drawable/homework" />
-
-                    <TextView
-                        android:id="@+id/textViewItem"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="TextView" />
-
-                    <View
-                        android:id="@+id/viewItemSelected"
-                        android:layout_width="wrap_content"
-                        android:layout_height="4dp"
-                        android:background="#0099cc" />
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-        </FrameLayout>
+        <View
+            android:id="@+id/viewItemSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_below="@id/textViewItem"
+            android:background="#0099cc" />
 
         <com.darwindeveloper.horizontalscrollmenulibrary.custom_views.CircularTextView
             android:id="@+id/notification"
@@ -64,12 +43,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_margin="10dp"
             android:gravity="center"
-            android:padding="4dp"
-            android:text="3" />
-
-
+            android:padding="2dp"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:visibility="gone" />
     </RelativeLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
