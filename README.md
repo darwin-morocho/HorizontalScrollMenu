@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-       compile 'com.github.MorochoRochaDarwin:HorizontalScrollMenu:2.0.0'
+       compile 'com.github.MorochoRochaDarwin:HorizontalScrollMenu:2.0.1'
 }
 ```
 
