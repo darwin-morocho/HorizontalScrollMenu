@@ -2,9 +2,9 @@
 Es una libreria que permite tener un menu horizontal con scroll, basado en la clase RecyclerView
 
 ##Capturas de Pantalla
-| demo 1 | demo 2 | demo 3
+| demo 1 | demo 2 | demo 3 |
 | --- | --- | --- |
-| ![] (https://cloud.githubusercontent.com/assets/15864336/23817168/0750bcb6-05bf-11e7-9095-d380da6b408d.png) | ![] (https://cloud.githubusercontent.com/assets/15864336/23817167/074d666a-05bf-11e7-8fa1-35bc96cfb1ee.png) | ![] (https://cloud.githubusercontent.com/assets/15864336/23817165/074c9154-05bf-11e7-8c8e-dbc49d31b45a.png)
+| ![] (https://cloud.githubusercontent.com/assets/15864336/23817168/0750bcb6-05bf-11e7-9095-d380da6b408d.png) | ![] (https://cloud.githubusercontent.com/assets/15864336/23817167/074d666a-05bf-11e7-8fa1-35bc96cfb1ee.png) | ![] (https://cloud.githubusercontent.com/assets/15864336/23817165/074c9154-05bf-11e7-8c8e-dbc49d31b45a.png) |
 
 | demo 4 | demo 5 | demo 6
 | --- | --- | --- |
