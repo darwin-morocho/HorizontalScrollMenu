@@ -1,7 +1,7 @@
 # HorizontalScrollMenu
 Es una libreria que permite tener un menu horizontal con scroll, basado en la clase RecyclerView
 
-##Capturas de Pantalla
+## Capturas de Pantalla
 
 | demo 1 | demo 2 | demo 3 |
 | --- | --- | --- |
@@ -12,10 +12,10 @@ Es una libreria que permite tener un menu horizontal con scroll, basado en la cl
 | ![](https://cloud.githubusercontent.com/assets/15864336/23817164/074a53b2-05bf-11e7-8f33-ab0bc16cc919.png) | ![](https://cloud.githubusercontent.com/assets/15864336/23817166/074cf022-05bf-11e7-8c73-c3417957b1c9.png) | ![](https://cloud.githubusercontent.com/assets/15864336/23817163/074932a2-05bf-11e7-890a-c2af7c57a7cc.png) |
 
 
-##Instalación
+## Instalación
 importe la libreria a su proyecto android con la opcion "import module" en android studio
 
-#Agregar la vista a su Layout
+# Agregar la vista a su Layout
 ```xml
   <com.darwindeveloper.horizontalscrollmenulibrary.custom_views.HorizontalScrollMenuView
         android:id="@+id/horizontal_menu"
@@ -43,7 +43,7 @@ Diseño completo
         app:item_textSize="15sp" />
 ```
 
-##En sus Actividades o Fragments
+## En sus Actividades o Fragments
 Inicialice la vista y capture los eventos clic
 ```java
         HorizontalScrollMenuView horizontal_menu = (HorizontalScrollMenuView) findViewById(R.id.horizontal_menu);
@@ -70,7 +70,7 @@ Inicialice la vista y capture los eventos clic
 ```
 
 
-##Metodos
+## Metodos
 La clase HorizontalScrollMenuView dispone de los siguientes metodos para facilitar y reducir la codificacion al usuario
 
 | Metodo | Descripción |
@@ -87,7 +87,7 @@ La clase HorizontalScrollMenuView dispone de los siguientes metodos para facilit
 
 
 
-###Para mas informacion vea el ejemplo de muestra.
+### Para mas informacion vea el ejemplo de muestra.
 
 
 
